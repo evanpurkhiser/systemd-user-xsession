@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Set the users shell
+export SHELL="$(getent passwd $LOGNAME | cut -d: -f7)"
+
+# Provided the DBUS path so systemd --user doesn't get confused
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/dbus/user_bus_socket"
+
 # Source any /etc/profile environment variables
 if [ -a /etc/profile ]
 then
