@@ -14,6 +14,7 @@ fi
 
 # Source any user specific environmnet variables
 if [ -a $HOME/.config/systemd/environment ]
+then
 	source $HOME/.config/bash/environment
 fi
 
