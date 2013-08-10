@@ -44,7 +44,7 @@ fi
 Then you can login via any of your gettys to start your session services. You
 may want to script it so different targets are started based on how you login.
 For example, when I login from tty1 it starts my graphical.target if it's not
-active, otherwise it starts my console.target.
+active, otherwise it starts my console.target (and doesn't exit).
 
 ## Environment script
 
