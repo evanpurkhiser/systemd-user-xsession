@@ -4,7 +4,7 @@ These scripts are used to start a `systemd --user` session.
 
 The service file will do a few different things
 
- 1. Initalize a logind session using the PAM login module on /dev/tty5
+ 1. Initialize a logind session using the PAM login module on /dev/tty5
  2. Load environment variables from /etc/profile into the systemd --user session
  3. Load user environment variables from $HOME/.config/systemd/environment
  4. Start the systemd --user session as the specified user, starting the
@@ -14,13 +14,13 @@ The service file will do a few different things
 
     systemctl start user-session@username
 
-Enabling the service wil conflflict with the getty on /dev/tty5 and will cause
+Enabling the service wil conflict with the getty on /dev/tty5 and will cause
 systemd --user to start on startup.
 
 ## Authenticating a user session
 
 Since the systemd --user session will be autostarted on boot as your user it's
-not nessicary to login. However, if you like the added security of requiring a
+not necessary to login. However, if you like the added security of requiring a
 login to access the session it's as easy as changing what the default.target
 starts.
 
