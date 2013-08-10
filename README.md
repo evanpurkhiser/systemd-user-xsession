@@ -30,14 +30,16 @@ the dbus.service (this is required or else `systemctl --user` and `systemd
 
 Then in your `.profile` put something like this:
 
-	if systemctl -q is-active user-session@username
-	then
-		# Bring up systemd --user to the specified target
-		systemctl --user start some-target.target
+```bash
+if systemctl -q is-active user-session@username
+then
+	# Bring up systemd --user to the specified target
+	systemctl --user start some-target.target
 
-		# Exit the VT
-		clear && logout
-	fi
+	# Exit the VT
+	clear && logout
+fi
+```
 
 Then you can login via any of your gettys to start your session services. You
 may want to script it so different targets are started based on how you login.
