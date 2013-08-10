@@ -1,0 +1,17 @@
+[Unit]
+Description=Systemd user session instance for %I
+Documentation=man:systemd
+Requires=home.mount
+
+[Service]
+User=%I
+PAMName=login
+ControlGroup=%R/user/%u/shared cpu:/ memory:/
+ControlGroupModify=yes
+Type=notify
+Restart=always
+TTYPath=/dev/tty5
+ExecStart=/usr/lib/systemd/systemd-user-startup
+
+[Install]
+WantedBy=multi-user.target

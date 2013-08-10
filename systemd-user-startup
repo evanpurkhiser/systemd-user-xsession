@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Source any /etc/profile environment variables
+if [ -a /etc/profile ]
+then
+	source /etc/profile
+fi
+
+# Source any user specific environmnet variables
+if [ -a $HOME/.config/systemd/environment ]
+	source $HOME/.config/bash/environment
+fi
+
+exec /usr/lib/systemd/systemd --user
