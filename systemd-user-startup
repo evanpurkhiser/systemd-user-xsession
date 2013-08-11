@@ -13,7 +13,7 @@ then
 fi
 
 # Source any user specific environmnet variables
-if [ -a $HOME/.config/systemd/environment ]
+if [ -a $HOME/.config/bash/environment ]
 then
 	source $HOME/.config/bash/environment
 fi

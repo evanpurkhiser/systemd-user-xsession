@@ -51,7 +51,7 @@ active, otherwise it starts my console.target (and doesn't exit).
 When your user session is started, you will most likely want to have some
 additional environment variables. For example, setting XDG_HOME directories.
 
-You can create a bash script `~/.config/systemd/environment` that you can use to
+You can create a bash script `~/.config/bash/environment` that you can use to
 set environment variables for the systemd user instance. It would probably be a
 good idea to put most of your exported environment variables in here and source
 the script in your `.profile` as well.
