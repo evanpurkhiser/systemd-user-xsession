@@ -55,3 +55,14 @@ You can create a bash script `~/.config/bash/environment` that you can use to
 set environment variables for the systemd user instance. It would probably be a
 good idea to put most of your exported environment variables in here and source
 the script in your `.profile` as well.
+
+## Installation
+
+This package was designed for Arch Linux, but should work just fine on other
+distributions using systemd.
+
+Arch Linux: [See the PKGBUILD file
+here](https://github.com/EvanPurkhiser/PKGBUILDs/tree/master/systemd-user-sessions-git)
+
+Other users: Simply copy the contesnt of the systemd directory into your systemd
+library directoy (usally `/usr/lib/systemd`)
