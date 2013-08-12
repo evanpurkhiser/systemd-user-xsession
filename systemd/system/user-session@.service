@@ -1,6 +1,7 @@
 [Unit]
 Description=Systemd user session instance for %I
 Documentation=man:systemd
+Conflicts=getty@tty5.service
 
 [Service]
 User=%I
