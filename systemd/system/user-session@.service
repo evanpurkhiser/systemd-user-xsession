@@ -1,7 +1,6 @@
 [Unit]
 Description=Systemd user session instance for %I
 Documentation=man:systemd
-Requires=home.mount
 
 [Service]
 User=%I
