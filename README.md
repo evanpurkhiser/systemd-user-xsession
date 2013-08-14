@@ -62,7 +62,7 @@ This package was designed for Arch Linux, but should work just fine on other
 distributions using systemd.
 
 Arch Linux: [See the PKGBUILD file
-here](https://github.com/EvanPurkhiser/PKGBUILDs/tree/master/systemd-user-sessions-git)
+here](https://github.com/EvanPurkhiser/PKGBUILDs/tree/master/systemd-user-sessions-git/PKGBUILD)
 
 Other users: Simply copy the contesnt of the systemd directory into your systemd
 library directoy (usally `/usr/lib/systemd`)
