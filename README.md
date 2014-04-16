@@ -1,3 +1,5 @@
+**As of systemd >= 205 this has been deprecated!**
+
 ## Systemd user service
 
 These scripts are used to start a `systemd --user` session.
