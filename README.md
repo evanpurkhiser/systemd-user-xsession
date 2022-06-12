@@ -6,11 +6,11 @@ These scripts are used to start a `systemd --user` session.
 
 The service file will do a few different things
 
- 1. Initialize a logind session using the PAM login module on /dev/tty5
- 2. Load environment variables from /etc/profile into the systemd --user session
- 3. Load user environment variables from $HOME/.config/systemd/environment
- 4. Start the systemd --user session as the specified user, starting the
-	default.target
+1. Initialize a logind session using the PAM login module on /dev/tty5
+2. Load environment variables from /etc/profile into the systemd --user session
+3. Load user environment variables from \$HOME/.config/systemd/environment
+4. Start the systemd --user session as the specified user, starting the
+   default.target
 
 ## Enabling the service
 
@@ -27,8 +27,8 @@ login to access the session it's as easy as changing what the default.target
 starts.
 
 Instead of having your default target start x11 and a window manager, just start
-the dbus.service (this is required or else `systemctl --user` and `systemd
---user` can't talk).
+the dbus.service (this is required or else `systemctl --user` and `systemd --user`
+can't talk).
 
 Then in your `.profile` put something like this:
 
@@ -64,7 +64,7 @@ This package was designed for Arch Linux, but should work just fine on other
 distributions using systemd.
 
 Arch Linux: [See the PKGBUILD file
-here](https://github.com/EvanPurkhiser/PKGBUILDs/tree/master/systemd-user-sessions-git/PKGBUILD)
+here](https://github.com/EvanPurkhiser/PKGBUILDs/tree/main/systemd-user-sessions-git/PKGBUILD)
 
 Other users: Simply copy the contesnt of the systemd directory into your systemd
 library directoy (usally `/usr/lib/systemd`)
